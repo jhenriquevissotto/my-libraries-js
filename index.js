@@ -11,9 +11,8 @@ const path = require("path");
 app.use(express.static(path.join(__dirname, "/public")));
 
 // routes
-const Router = express.Router();
-Router.get("*", (req, res) => {
-  res.send("Hello World!");
+app.get("/", (req, res) => {
+  res.status(200).send("Hello World!");
 });
 
 // server
